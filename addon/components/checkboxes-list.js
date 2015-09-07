@@ -152,7 +152,9 @@ export default Ember.Component.extend({
      * @param {object} option
      */
     toggleOption (option) {
-      if (get(option, 'isDisabled')) return;
+      if (get(option, 'isDisabled')) {
+        return;
+      }
       var orderCounter = get(this, 'orderCounter');
       var o = get(this, 'options').findBy('value', get(option, 'value'));
       set(o, 'order', orderCounter);
