@@ -1,6 +1,5 @@
 import Ember from 'ember';
 
-var typeOf = Ember.typeOf;
 var eA = Ember.A;
 var set = Ember.set;
 var get = Ember.get;
