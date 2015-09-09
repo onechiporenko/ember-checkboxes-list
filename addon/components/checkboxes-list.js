@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
-var eA = Ember.A;
-var set = Ember.set;
-var get = Ember.get;
-var on = Ember.on;
-var computed = Ember.computed;
+const eA = Ember.A;
+const set = Ember.set;
+const get = Ember.get;
+const on = Ember.on;
+const computed = Ember.computed;
 
 /**
  * @typedef {{
@@ -65,7 +65,23 @@ export default Ember.Component.extend({
    */
   identifier: '',
 
+  /**
+   * Message shown when no one option is selected
+   * @type {string}
+   */
   emptySelectionMessage: 'Nothing selected',
+
+  /**
+   * Determines if <code>staticDisplayVal</code> should be shown and not <code>displayVal</code>
+   * @type {boolean}
+   */
+  useStaticDisplayVal: false,
+
+  /**
+   * Some static message shown instead of <code>displayVal</code>
+   * @type {string}
+   */
+  staticDisplayVal: '',
 
   /**
    * String with selected options labels separated with ', '

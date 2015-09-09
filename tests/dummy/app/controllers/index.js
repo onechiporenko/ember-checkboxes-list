@@ -41,6 +41,19 @@ export default Ember.Controller.extend({
     { value: '4th', label: 'Fourth' }
   ]),
 
+  example4Value: '',
+
+  example4StaticDisplayVal: 'Some static text',
+
+  example4FieldName: 'example4Value',
+
+  example4Attributes: eA([
+    { value: '1st', label: 'First', selected: true },
+    { value: '2nd', label: 'Second', selected: true },
+    { value: '3rd', label: 'Third' },
+    { value: '4th', label: 'Fourth' }
+  ]),
+
   actions: {
     checkboxesListUpdate (fieldName, value) {
       this.set(fieldName, value.mapBy('value').join(', '));

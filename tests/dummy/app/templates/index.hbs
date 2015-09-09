@@ -84,4 +84,33 @@
         </div>
     </div>
     <!-- -->
+    <!-- -->
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Using <code>useStaticDisplayVal</code> and <code>staticDisplayVal</code></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">{{checkboxes-list identifier=example4FieldName attributes=example4Attributes useStaticDisplayVal=true staticDisplayVal=example4StaticDisplayVal}}</div>
+        <div class="col-md-9">
+            <pre><code>{{example4FieldName}}: {{tostring example4Value}}</code></pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <p><code>Usage:</code></p>
+            <pre><code class="language-handlebars">\{{checkboxes-list identifier=example4FieldName attributes=example4Attributes useStaticDisplayVal=true staticDisplayVal=example4StaticDisplayVal}}</code></pre>
+            <p><code>example4StaticDisplayVal:</code></p>
+            <pre><code class="language-javascript">{{tostring example4StaticDisplayVal}}</code></pre>
+            <p><code>example4FieldName:</code></p>
+            <pre><code class="language-javascript">{{tostring example4FieldName}}</code></pre>
+            <p><code>triggered action:</code></p>
+            <pre><code class="language-javascript">{{tostring this._actions.checkboxesListUpdate}}</code></pre>
+        </div>
+        <div class="col-md-4">
+            <p><code>example3Attributes:</code></p>
+            <pre><code class="language-javascript">{{tostring example3Attributes}}</code></pre>
+        </div>
+    </div>
+    <!-- -->
 </div>

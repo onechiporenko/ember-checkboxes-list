@@ -1,6 +1,12 @@
 <div class="checkboxes-list">
     <div class="btn-group">
-        <a class="dropdown-toggle btn btn-default" data-toggle="dropdown">{{displayVal}} <span class="caret"></span></a>
+        <a class="dropdown-toggle btn btn-default" data-toggle="dropdown">
+            {{#if useStaticDisplayVal}}
+                {{staticDisplayVal}}
+            {{else}}
+                {{displayVal}}
+            {{/if}}
+             <span class="caret"></span></a>
         <ul class="dropdown-menu">
             {{#each options as |option|}}
                 <li>
