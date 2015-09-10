@@ -145,7 +145,6 @@ export default Ember.Component.extend({
 
   /**
    * If user already selected maximum of allowed options, disable other options
-   * If user selected less than minimum of needed options, mark value as invalid
    * If user deselect some option, all disabled options become enabled
    * Triggers on each option select/deselect
    * @method checkSelectedItemsCount
