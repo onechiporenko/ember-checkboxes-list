@@ -1,7 +1,7 @@
 {
   "name": "ember-checkboxes-list",
   "version": "1.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "List with checkboxes, which keeps the selection order.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -37,12 +37,13 @@
     "ember-try": "0.0.6"
   },
   "keywords": [
-    "ember-addon", "checkboxes", "list"
+    "ember-addon", "checkboxes", "list", "order"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.3"
   },
   "ember-addon": {
+    "demoURL": "http://onechiporenko.github.io/ember-checkboxes-list/",
     "configPath": "tests/dummy/config"
   }
 }
