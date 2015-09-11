@@ -1,10 +1,12 @@
 import Ember from 'ember';
 
-const eA = Ember.A;
-const set = Ember.set;
-const get = Ember.get;
-const on = Ember.on;
-const computed = Ember.computed;
+const {
+  set,
+  get,
+  on,
+  computed,
+  A
+} = Ember;
 
 /**
  * @typedef {{
@@ -47,18 +49,18 @@ export default Ember.Component.extend({
    * <code>options</code> where <code>isSelected</code> is true
    * @type {dropDownElement[]}
    */
-  val: eA([]),
+  val: A([]),
 
   /**
    * List of options
    * @type {dropDownElement[]}
    */
-  options: eA([]),
+  options: A([]),
 
   /**
    * @type {{value: string, label: string, selected: boolean}}
    */
-  attributes: eA([]),
+  attributes: A([]),
 
   /**
    * @type {string}
@@ -124,7 +126,7 @@ export default Ember.Component.extend({
    * @method calculateOptions
    */
   calculateOptions () {
-    set(this, 'options', eA(get(this, 'attributes').map(entryValue => {
+    set(this, 'options', A(get(this, 'attributes').map(entryValue => {
       return dropDownElement.create({
         value: entryValue.value,
         label: entryValue.label || entryValue.value,
@@ -140,7 +142,7 @@ export default Ember.Component.extend({
    */
   calculateVal () {
     var filtered = get(this, 'options').filterBy('isSelected');
-    set(this, 'val', eA(filtered).sortBy('order'));
+    set(this, 'val', A(filtered).sortBy('order'));
   },
 
   /**
@@ -153,7 +155,7 @@ export default Ember.Component.extend({
     var allowedToSelect = get(this, 'allowedToSelect');
     var currentlySelected = get(this, 'options').filterBy('isSelected').length;
     var selectionDisabled = allowedToSelect <= currentlySelected;
-    eA(get(this, 'options').filterBy('isSelected', false)).setEach('isDisabled', selectionDisabled);
+    A(get(this, 'options').filterBy('isSelected', false)).setEach('isDisabled', selectionDisabled);
   },
 
   action: 'checkboxesListUpdate',
